@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Granular Business Plan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#overview" aria-label="Granular home">
+        <img class="brand-logo" src="assets/logo.png" alt="Granular" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#proposal">Proposal</a>
+        <a href="#business-plan">Business Plan</a>
+        <a href="#monetization">Monetization</a>
+        <a href="#rollout">Rollout</a>
+      </nav>
+
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="mobile-panel" hidden>
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="#proposal">Proposal</a>
+        <a href="#business-plan">Business Plan</a>
+        <a href="#monetization">Monetization</a>
+        <a href="#rollout">Rollout</a>
+      </nav>
+    </div>
+
+    <main>
+      <section class="hero" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Consumer FinTech / Retail Data Infrastructure</p>
+          <h1>Granular</h1>
+          <p>
+            A privacy-first personal finance and digital receipt platform that turns
+            receipts and purchase records into item-level spending intelligence.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#proposal">Read proposal</a>
+            <a class="secondary-link" href="#rollout">View rollout</a>
+          </div>
+        </div>
+        <div class="receipt-visual" aria-label="Granular receipt intelligence preview">
+          <div class="phone-shell">
+            <div class="app-top">
+              <span></span>
+              <strong>April insight</strong>
+            </div>
+            <div class="receipt-card">
+              <p>Household basket</p>
+              <h2>GBP84.20</h2>
+              <div class="receipt-row"><span>Fresh produce</span><strong>GBP18.40</strong></div>
+              <div class="receipt-row"><span>Pharmacy</span><strong>GBP12.80</strong></div>
+              <div class="receipt-row"><span>Staples</span><strong>GBP29.15</strong></div>
+              <div class="receipt-row muted"><span>Repeat-item rise</span><strong>+8%</strong></div>
+            </div>
+            <div class="metric-grid">
+              <div><span>Receipts</span><strong>48</strong></div>
+              <div><span>Alerts</span><strong>6</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="summary-strip" aria-label="Business highlights">
+        <article>
+          <span>01</span>
+          <h2>Item-level clarity</h2>
+          <p>Granular explains what was bought, not only where money moved.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Local-first privacy</h2>
+          <p>Detailed purchase histories stay under the user's control by default.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Retail infrastructure</h2>
+          <p>Retailer value comes from digital receipt delivery and post-purchase tooling.</p>
+        </article>
+      </section>
+
+      <section class="content-shell">
+        <aside class="section-tabs" aria-label="Document sections">
+          <a href="#proposal">Business Proposal</a>
+          <a href="#business-plan">Business Plan</a>
+          <a href="#monetization">Premium & Monetization</a>
+          <a href="#rollout">Rollout Strategy</a>
+        </aside>
+
+        <div class="documents">
+          <article class="document-section" id="proposal" data-doc="proposal"></article>
+          <article class="document-section" id="business-plan" data-doc="businessPlan"></article>
+          <article class="document-section" id="monetization" data-doc="monetization"></article>
+          <article class="document-section" id="rollout" data-doc="rollout"></article>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
