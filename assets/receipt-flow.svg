@@ -1,0 +1,25 @@
+<svg width="880" height="520" viewBox="0 0 880 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Receipt to insight flow</title>
+  <desc id="desc">Receipt data flowing through privacy controls into budgets, alerts, and retailer infrastructure.</desc>
+  <rect width="880" height="520" rx="40" fill="#151A1D"/>
+  <rect x="70" y="76" width="178" height="328" rx="22" fill="#FEFEFC"/>
+  <path d="M100 132H208M100 176H184M100 220H212M100 264H166M100 308H196" stroke="#939E98" stroke-width="12" stroke-linecap="round"/>
+  <path d="M292 240C347 240 347 144 402 144H430" stroke="#F3C35A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M292 260C352 260 352 260 412 260H430" stroke="#72B28B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M292 280C347 280 347 376 402 376H430" stroke="#E06A4F" stroke-width="8" stroke-linecap="round"/>
+  <rect x="430" y="86" width="160" height="116" rx="24" fill="#213B35"/>
+  <rect x="460" y="124" width="74" height="12" rx="6" fill="#8DC3A3"/>
+  <rect x="460" y="154" width="92" height="18" rx="9" fill="#FEFEFC"/>
+  <rect x="430" y="202" width="160" height="116" rx="24" fill="#F6F4ED"/>
+  <rect x="460" y="240" width="88" height="12" rx="6" fill="#76847E"/>
+  <rect x="460" y="270" width="72" height="18" rx="9" fill="#1F6F55"/>
+  <rect x="430" y="318" width="160" height="116" rx="24" fill="#F3C35A"/>
+  <rect x="460" y="356" width="76" height="12" rx="6" fill="#765A15"/>
+  <rect x="460" y="386" width="92" height="18" rx="9" fill="#151A1D"/>
+  <rect x="648" y="122" width="162" height="276" rx="28" fill="#FEFEFC"/>
+  <rect x="678" y="160" width="92" height="12" rx="6" fill="#222A2E"/>
+  <rect x="678" y="204" width="102" height="38" rx="12" fill="#E8EFEA"/>
+  <rect x="678" y="260" width="74" height="12" rx="6" fill="#939E98"/>
+  <rect x="678" y="294" width="96" height="12" rx="6" fill="#939E98"/>
+  <rect x="678" y="328" width="64" height="12" rx="6" fill="#939E98"/>
+</svg>

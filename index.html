@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="announcement">
+      <a href="#rollout">Granular launch system: proposal, business plan, monetization, and rollout in one living site</a>
+    </div>
+
     <header class="site-header">
       <a class="brand" href="#overview" aria-label="Granular home">
         <img class="brand-logo" src="assets/logo.png" alt="Granular" />
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#system">System</a>
         <a href="#proposal">Proposal</a>
-        <a href="#business-plan">Business Plan</a>
-        <a href="#monetization">Monetization</a>
+        <a href="#business-plan">Plan</a>
+        <a href="#monetization">Premium</a>
         <a href="#rollout">Rollout</a>
       </nav>
+
+      <div class="header-actions">
+        <a class="ghost-action" href="#documents">Explore docs</a>
+        <a class="solid-action" href="#proposal">Start reading</a>
+      </div>
 
       <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
         <span></span>
@@ -28,69 +38,150 @@
 
     <div class="mobile-panel" hidden>
       <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="#system">System</a>
         <a href="#proposal">Proposal</a>
         <a href="#business-plan">Business Plan</a>
-        <a href="#monetization">Monetization</a>
-        <a href="#rollout">Rollout</a>
+        <a href="#monetization">Premium & Monetization</a>
+        <a href="#rollout">Rollout Strategy</a>
       </nav>
     </div>
 
     <main>
       <section class="hero" id="overview">
         <div class="hero-copy">
-          <p class="eyebrow">Consumer FinTech / Retail Data Infrastructure</p>
-          <h1>Granular</h1>
+          <a class="release-pill" href="#monetization">Privacy-first purchase intelligence</a>
+          <h1>Turn receipts into a household spending knowledge system</h1>
           <p>
-            A privacy-first personal finance and digital receipt platform that turns
-            receipts and purchase records into item-level spending intelligence.
+            Granular organizes the complete business case for a local-first finance
+            and digital receipt platform: what it is, why it matters, how it makes
+            money, and how it rolls out.
           </p>
           <div class="hero-actions">
-            <a class="primary-link" href="#proposal">Read proposal</a>
-            <a class="secondary-link" href="#rollout">View rollout</a>
+            <a class="primary-link" href="#proposal">Read the proposal</a>
+            <a class="secondary-link" href="#system">View the system</a>
           </div>
         </div>
-        <div class="receipt-visual" aria-label="Granular receipt intelligence preview">
-          <div class="phone-shell">
-            <div class="app-top">
+
+        <div class="product-stage" aria-label="Granular knowledge system preview">
+          <div class="browser-window">
+            <div class="browser-bar">
               <span></span>
-              <strong>April insight</strong>
+              <span></span>
+              <span></span>
+              <strong>granular.app/knowledge</strong>
             </div>
-            <div class="receipt-card">
-              <p>Household basket</p>
-              <h2>GBP84.20</h2>
-              <div class="receipt-row"><span>Fresh produce</span><strong>GBP18.40</strong></div>
-              <div class="receipt-row"><span>Pharmacy</span><strong>GBP12.80</strong></div>
-              <div class="receipt-row"><span>Staples</span><strong>GBP29.15</strong></div>
-              <div class="receipt-row muted"><span>Repeat-item rise</span><strong>+8%</strong></div>
-            </div>
-            <div class="metric-grid">
-              <div><span>Receipts</span><strong>48</strong></div>
-              <div><span>Alerts</span><strong>6</strong></div>
+            <div class="docs-preview">
+              <aside>
+                <p>Granular</p>
+                <a class="active" href="#proposal">Business proposal</a>
+                <a href="#business-plan">Business plan</a>
+                <a href="#monetization">Monetization</a>
+                <a href="#rollout">Rollout</a>
+              </aside>
+              <article>
+                <div class="search-box">Search item, store, risk, metric...</div>
+                <p class="preview-kicker">Receipt intelligence</p>
+                <h2>See what changed in the basket</h2>
+                <p>
+                  Item-level records connect spending, retailer behavior, alerts,
+                  budgets, and privacy controls into one trusted layer.
+                </p>
+                <div class="insight-grid">
+                  <div>
+                    <span>Receipts reviewed</span>
+                    <strong>48</strong>
+                  </div>
+                  <div>
+                    <span>Alert patterns</span>
+                    <strong>6</strong>
+                  </div>
+                  <div>
+                    <span>Local-first</span>
+                    <strong>On</strong>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="summary-strip" aria-label="Business highlights">
-        <article>
-          <span>01</span>
-          <h2>Item-level clarity</h2>
-          <p>Granular explains what was bought, not only where money moved.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h2>Local-first privacy</h2>
-          <p>Detailed purchase histories stay under the user's control by default.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h2>Retail infrastructure</h2>
-          <p>Retailer value comes from digital receipt delivery and post-purchase tooling.</p>
-        </article>
+      <section class="logo-row" aria-label="Granular operating layers">
+        <span>Receipt capture</span>
+        <span>Local privacy</span>
+        <span>Budgets</span>
+        <span>Alerts</span>
+        <span>Retailer pilots</span>
+        <span>Household planning</span>
       </section>
 
-      <section class="content-shell">
+      <section class="system-section" id="system">
+        <div class="section-heading">
+          <p class="eyebrow">Design System</p>
+          <h2>A GitBook-inspired knowledge site for Granular</h2>
+          <p>
+            The redesign uses a calm documentation product style: generous space,
+            rounded navigation, modular cards, clear hierarchy, and visual product
+            previews that make the plan feel like an active operating system.
+          </p>
+        </div>
+
+        <div class="system-grid">
+          <article class="system-card large-card">
+            <img src="assets/knowledge-system.svg" alt="Granular product knowledge interface illustration" />
+            <span>Core pattern</span>
+            <h3>Documentation as product strategy</h3>
+            <p>
+              Each document becomes a navigable knowledge module, with consistent
+              structure and a sticky table of contents for fast scanning.
+            </p>
+          </article>
+          <article class="system-card">
+            <span>Palette</span>
+            <h3>Warm paper, ink, and trust green</h3>
+            <p>
+              Off-white surfaces, dark ink text, restrained green, and amber
+              accents support a financial product that feels clear and private.
+            </p>
+          </article>
+          <article class="system-card accent-card">
+            <span>Components</span>
+            <h3>Pills, bento panels, and document cards</h3>
+            <p>
+              The site uses repeatable interface pieces that can grow into a larger
+              brand and product marketing system.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-band">
+        <div>
+          <p class="eyebrow">Product Thesis</p>
+          <h2>Useful before integrations, stronger when the network arrives</h2>
+        </div>
+        <div class="feature-list">
+          <article>
+            <strong>01</strong>
+            <h3>Manual-first utility</h3>
+            <p>Receipt scan and digital import create value before retailer integrations exist.</p>
+          </article>
+          <article>
+            <strong>02</strong>
+            <h3>Control layer</h3>
+            <p>Budgets, drift alerts, and inflation detection turn records into prevention.</p>
+          </article>
+          <article>
+            <strong>03</strong>
+            <h3>Infrastructure path</h3>
+            <p>Retailer pilots validate automated delivery after user demand is proven.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-shell" id="documents">
         <aside class="section-tabs" aria-label="Document sections">
+          <p>Knowledge base</p>
           <a href="#proposal">Business Proposal</a>
           <a href="#business-plan">Business Plan</a>
           <a href="#monetization">Premium & Monetization</a>
@@ -104,7 +195,26 @@
           <article class="document-section" id="rollout" data-doc="rollout"></article>
         </div>
       </section>
+
+      <section class="final-cta">
+        <img src="assets/receipt-flow.svg" alt="Granular receipt-to-insight flow" />
+        <div>
+          <p class="eyebrow">Launch Path</p>
+          <h2>Build purchase intelligence without making privacy the tradeoff</h2>
+          <p>
+            Granular starts with a focused consumer wedge, proves paid control
+            features, and expands into retailer receipt infrastructure once the
+            product loop is validated.
+          </p>
+          <a class="primary-link" href="#rollout">Review rollout strategy</a>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <img src="assets/logo.png" alt="Granular" />
+      <p>Receipt Accounts business plan site. Built as a living strategy knowledge system.</p>
+    </footer>
 
     <script src="app.js"></script>
   </body>
