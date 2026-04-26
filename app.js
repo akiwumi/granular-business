@@ -1,1442 +1,398 @@
 const docs = {
-  proposal: `# Granular Business Proposal
+  proposal: `# Granular Investor Proposal
 
 > Working name: Receipt Accounts
-> Category: Consumer FinTech / Retail Data Infrastructure
+> Category: Privacy-first consumer finance / retail and billing data infrastructure
 > Stage: Pre-seed / MVP planning
 > Date: April 2026
 
 ## Executive Summary
 
-Granular is a privacy-first personal finance and digital receipt platform that helps people understand what they actually bought, not just where they spent money.
+Granular is a privacy-first itemized spending platform built around a direct connection between users and the businesses they pay. The core product logic is simple: wherever possible, purchases and payment obligations should enter the app already itemized through retailer or biller APIs, so the user can see exactly what they bought or paid for, not just where money went.
 
-Most banking and budgeting apps stop at merchant-level transaction data: "Tesco - GBP84.20" or "Pharmacy - GBP28.40." Granular turns receipts and digital purchase records into item-level spending intelligence, giving users a clearer view of household costs, repeat purchases, overspend patterns, and retailer-by-retailer behavior.
+Granular is not primarily a payment app at launch. It monitors, analyzes, categorizes, and verifies spending and obligations by combining direct partner integrations, digital receipt and invoice imports, manual scanning, OCR review, and manual completion where needed.
 
-The product begins as a consumer app for receipt capture, itemized purchase history, search, budgets, and alerts. Over time, it expands into a retailer-connected receipt infrastructure layer that can automate digital receipt delivery and basket ingestion.
-
-Granular's strategic advantage is trust. The product is designed around a local-first privacy promise: detailed personal purchase histories stay on the user's device by default, with backend systems used only for minimal coordination, optional sync, integrations, and account services. This creates a more credible alternative to loyalty-led data capture and surveillance-heavy consumer finance tools.
+The goal is a complete household record that leaves as little as possible out.
 
 ## The Problem
 
-Consumers increasingly need better control over everyday spending, especially in high-frequency categories such as groceries, pharmacy, household goods, commuting, and family essentials.
+Consumers face a visibility gap:
 
-Existing tools are too shallow:
+- bank statements show that money moved, but not what was bought
+- budgeting apps stay too abstract at merchant level
+- receipts and bills are fragmented across paper, email, portals, and payment history
+- utilities, mortgage, and recurring services are rarely unified with shopping activity
+- cash purchases often disappear from the household record
 
-- Banking apps show transactions, not the item-level reasons behind them.
-- Budgeting apps often depend on broad categories that hide the real spending behavior.
-- Receipt apps usually store documents instead of creating financial intelligence.
-- Loyalty programs collect basket-level data for retailers, not primarily for the user's benefit.
+The real spending picture is spread across multiple systems. Granular should unify them into one searchable, structured, actionable record.
 
-The result is a visibility gap. A user may know they spent GBP84.20 at a store, but they do not know which items caused the total, whether the same staples are rising in price, or how their household behavior is changing over time.
+## Core Thesis
 
-There is also a trust gap. Purchase history is sensitive. It can reveal income pressure, health needs, household structure, lifestyle, routines, and financial stress. Many users want better financial tools but do not want to trade their private life for convenience.
+Most finance apps work at merchant level. Granular should work at line-item and obligation level.
 
-## The Insight
+The app should become the place where a user can see:
 
-The real financial event is not only the payment. It is the basket.
+- what they bought
+- what they paid for
+- which categories are increasing
+- which recurring bills are drifting
+- how much of the household picture is visible and verified
+- which records came directly from partners and which were manually captured
 
-A payment shows that money moved. A basket explains why.
+## Why This Wins
 
-Granular is built on the idea that personal finance becomes more useful when a record includes:
+Granular is strongest when positioned as:
 
-- retailer
-- date and time
-- line items
-- quantities
-- item-level prices
-- discounts
-- payment method where available
-- impact on the user's spending picture
+- a privacy-first itemized spending and payment-visibility platform
+- a retailer-connected and biller-connected household data layer
+- a consumer control product rather than a launch-phase payments product
+- a trust-aware infrastructure platform over time
 
-This turns vague transaction history into practical financial understanding.
-
-## The Solution
-
-Granular gives users a purchase-aware financial view through:
-
-- receipt scanning
-- digital receipt import
-- searchable itemized history
-- optional card or bank connection
-- manual balance mode for privacy-conscious users
-- budgets and spending limits
-- overspend and price-change alerts
-- retailer integrations where available
-
-The intended user flow is simple:
-
-1. A user scans a paper receipt or imports a digital receipt.
-2. Granular extracts and organizes the line items.
-3. The user can search, review, and track purchases by item, store, card, and time period.
-4. Granular highlights patterns such as overspend, repeat-item inflation, and retailer drift.
-5. Retailer integrations later reduce manual effort by delivering structured receipts automatically.
+It should not lead with banking replacement language, crypto-first framing, speculative token mechanics, or cashback-first messaging.
 
 ## Value Proposition
 
-### For Consumers
+### For Users
 
-Granular helps users:
+- see exactly what was bought or billed
+- understand which items, providers, and obligations are driving spend
+- monitor recurring-cost change and inflation drift
+- keep a complete household record including non-connected services and cash
+- retain control over sensitive data through privacy-first design
 
-- see exactly what they bought
-- understand which items and retailers drive spending
-- manage spending across multiple cards
-- plan budgets from real purchase behavior
-- earn opt-in cashback when normal purchases match clear reward rules
-- reduce paper receipt clutter
-- export their own records
-- get useful financial insight without giving up privacy
+### For Partners
 
-### For Retailers
-
-Granular helps retailers:
-
-- reduce paper receipt costs
-- modernize digital receipt delivery
-- improve post-purchase customer experience
-- support returns and proof-of-purchase workflows
-- offer privacy-aware receipt infrastructure without forcing loyalty enrollment
-
-## Product Principles
-
-### Privacy by Design
-
-Detailed purchase history should stay local by default. The company should not depend on collecting centralized personal spending profiles as its core business model.
-
-### Manual-First Utility, Automated Future
-
-The product should be useful before broad retailer integrations exist. Manual receipt scan and digital import create the first product wedge; automation improves the experience later.
-
-### User Benefit Before Data Extraction
-
-Granular should help the user first. Retailer value should come from receipt infrastructure, customer experience, and operational tooling rather than hidden consumer profiling.
-
-## Core Product Features
-
-- Receipt scan and OCR review
-- Digital receipt import
-- Itemized purchase history
-- Search by item, store, date, and category
-- Purchase-aware spending dashboard
-- Manual balance mode
-- Optional card and bank linking
-- Multi-card spend views
-- Budgets and spending limits
-- Overspend alerts
-- Repeat-item inflation detection
-- Retailer drift alerts
-- Export to spreadsheet, PDF, or Excel
-- Opt-in cashback rewards with a user-visible ledger
-
-## Market Opportunity
-
-Granular sits between three large trends:
-
-- rising consumer demand for practical spending control
-- retailer pressure to digitize receipts and reduce paper waste
-- growing public resistance to unnecessary data collection
-
-The initial market should focus on high-frequency household spending where item-level visibility matters most: grocery, pharmacy, household goods, and everyday retail.
-
-## Business Model
-
-Granular should use a mixed consumer and B2B model.
-
-### Consumer Revenue
-
-- Free tier for receipt intelligence and basic spending visibility
-- Premium Individual for alerts, advanced budgets, multi-card controls, and deeper trends
-- Premium Household for shared planning, household controls, and reporting
-- Standard cashback offers for free users, with Premium boosts and optimization alerts after the core loop is proven
-
-### Retailer / B2B Revenue
-
-- integration setup fees
-- platform or usage fees for digital receipt delivery
-- white-label digital receipt tooling
-- support and workflow tooling for retailer operations
-- retailer-funded, brand-funded, or affiliate-funded cashback campaign fees that do not require resale of personal purchase profiles
-
-The company should avoid relying on resale of personal consumer data. The stronger revenue story is software, infrastructure, and premium utility.
-
-## Competitive Position
-
-Granular is differentiated from:
-
-- budgeting apps, which usually stop at categories
-- banking apps, which rarely show item-level basket data
-- receipt scanners, which store documents but often lack financial intelligence
-- loyalty platforms, which collect purchase data primarily for the retailer
-
-Granular combines item-level financial understanding, retailer-connected receipt infrastructure, and a privacy-first architecture.
-
-## Go-To-Market Strategy
-
-The first wedge should be consumer utility:
-
-**"See not just where your money went, but exactly what you bought."**
-
-Launch with receipt intelligence, search, basic spending views, and privacy-first messaging. Then add paid control features such as alerts and advanced budgets. Retailer integrations should follow once user value and repeat behavior are proven.
-
-## Key Risks and Mitigations
-
-| Risk | Mitigation |
-|---|---|
-| Retailer integrations take longer than expected | Start with manual scan and digital receipt import |
-| OCR and item normalization are imperfect | Use user review, correction flows, and continuous normalization |
-| Users hesitate to connect banks | Offer manual balance mode and optional linking |
-| Trust concerns slow adoption | Make local-first privacy clear in onboarding and product UI |
-| Product scope becomes too broad | Keep the first promise focused on item-level spending clarity |
+- deliver itemized records directly into the customer experience
+- improve digital receipt and invoice quality
+- support proof-of-purchase and proof-of-billing workflows
+- modernize post-purchase and post-billing support
+- participate in a privacy-aware trust layer
 
 ## Investment Case
 
-Granular addresses a practical user problem and a real retailer infrastructure need. It has a credible wedge, a staged rollout path, and a differentiated trust position.
+Granular addresses a real household problem with a staged, credible rollout:
 
-The core thesis is simple:
+1. launch as a software and visibility platform
+2. prove habit through itemized records and actionable control
+3. validate focused retailer and biller integrations
+4. expand into verification infrastructure and optional partner-funded features later
 
-People want better financial visibility, but they do not want to sell their privacy to get it.
+The core story is simple:
 
-Granular can deliver that visibility while building toward a broader privacy-first receipt and purchase intelligence network.`,
+**Granular connects users directly to the businesses they pay, so spending appears already itemized wherever possible and can be completed where needed through trusted fallback capture.**`,
 
-  businessPlan: `# Granular Business Plan
+  businessPlan: `# Granular Product Model
 
-> Working name: Receipt Accounts
-> Category: Consumer FinTech / Retail Data Infrastructure
-> Stage: Pre-seed / MVP planning
-> Date: April 2026
+> Focus: Direct itemization, fallback coverage, monitoring, and verification
 
-## 1. Business Overview
+## Product Positioning
 
-Granular is a privacy-first personal finance and digital receipt platform. It helps users understand spending at item level while keeping detailed purchase and financial data under the user's control.
+Granular should be presented as a direct retailer-to-user and biller-to-user information layer for the household. The core is not payment execution. The core is visibility, categorization, analysis, and verification.
 
-The business has two connected parts:
+## Product Modes
 
-- a consumer app for itemized spending clarity, budgets, alerts, and records
-- a retailer-facing infrastructure layer for digital receipt delivery and structured post-purchase experiences
-- an opt-in cashback layer that rewards eligible purchases without turning private purchase history into a resale asset
+### Mode A: Direct Itemization
 
-## 2. Mission
+This is the default and most important mode.
 
-To give people a truthful, item-level understanding of their spending without requiring them to give up personal privacy.
+- retailers and billers connect through APIs
+- purchases, invoices, and obligations flow into the app already itemized
+- the app preserves source, timestamp, provenance, and verification state
+- users see structured records instead of abstract transaction lines
 
-## 3. Vision
+### Mode B: Manual and OCR Completion
 
-To become the trusted layer between payment events and financial understanding, while establishing a new privacy-first standard for digital receipts and purchase intelligence.
-
-## 4. Product Summary
-
-Granular allows users to:
+This closes the gaps where connectivity is not yet available.
 
 - scan paper receipts
-- import digital receipts
-- view itemized purchase history
-- search by item, store, date, and category
-- track spending by card, store, item, and time period
-- optionally connect cards or bank accounts
-- use manual balance mode without bank linking
-- set budgets and spending limits
-- receive overspend and price-change alerts
-- activate eligible cashback offers and track pending, confirmed, and paid rewards
-- export their own records
+- upload digital receipts and invoices
+- run OCR with user review
+- capture non-connected services and cash purchases
 
-The product is designed to store detailed purchase history locally by default. Optional backend systems support account services, integrations, sync, and coordination without making centralized personal purchase profiles the core business asset.
+This is critical for completeness, but it is the coverage layer around the connected network rather than the long-term product identity.
 
-## 5. Market Need
+### Mode C: Monitoring, Analysis, and Categorization
 
-### Consumer Need
+Granular should monitor household activity without executing the payments themselves at launch.
 
-Consumers want practical answers to questions such as:
+- analyze purchase and billing patterns
+- categorize spending and obligations
+- surface inflation, drift, and recurring-cost changes
+- match direct records to payment context where useful
+- show a fuller household picture across shopping and bills
 
-- What did I actually buy?
-- Which items are driving my grocery bill?
-- Which retailers are causing overspend?
-- What is happening across my different cards?
-- How much did essentials cost this month compared with last month?
+### Mode D: Verification Infrastructure
 
-Merchant-level transaction data does not answer those questions.
+Over time, the platform can support:
 
-### Retailer Need
+- proof-of-purchase workflows
+- proof-of-billing workflows
+- portable verified records
+- partner attestations
+- consent and permission logging
 
-Retailers need:
+## Product Principles
 
-- lower paper receipt costs
-- better digital receipt delivery
-- improved post-purchase customer experience
-- easier proof-of-purchase and returns support
-- privacy-aware innovation beyond traditional loyalty programs
+- the direct user-to-retailer and user-to-biller connection is the core of the app
+- partner connectivity is not a side feature; it is part of the product core
+- manual capture exists to prevent blind spots, not to define the whole company
+- the strongest consumer promise is item-level clarity plus provenance
 
-## 6. Target Customers
+## Strategic Conclusion
 
-### Primary Consumer Segments
+The strongest version of Granular is a retailer-connected and biller-connected itemized spending platform that helps users understand what they buy and pay for, while filling the remaining gaps through manual capture and review.`,
 
-- budget-conscious households
-- users managing multiple payment cards
-- people frustrated by delayed or shallow banking app data
-- privacy-conscious consumers
-- people who frequently shop in grocery, pharmacy, and household categories
+  mvp: `# Coverage and MVP Definition
 
-### Primary Retailer Segments
+> Goal: Build for the full household picture, then launch with a focused but complete first version
 
-- grocery chains
-- pharmacies
-- household goods retailers
-- high-frequency retail categories where receipts, returns, and repeat purchases matter
+## Scope of Coverage
 
-## 7. Value Proposition
+Granular should aim to cover more than classic shopping over time. The household picture includes:
 
-### For Users
+- grocery and pharmacy
+- household essentials
+- online shopping
+- utilities and energy
+- telecom and subscriptions
+- insurance where relevant
+- mortgage and recurring housing obligations
+- other household services
+- cash transactions through manual input
 
-- understand spending at item level
-- replace paper receipt clutter with usable records
-- monitor trends across stores and items
-- manage spending across cards
-- create budgets based on real behavior
-- receive alerts before overspend becomes a larger problem
-- maintain privacy and control over purchase history
+The product promise should be that the app aims to leave nothing important out.
 
-### For Retailers
+## Included in MVP
 
-- reduce paper receipt costs
-- modernize post-purchase experience
-- deliver structured digital receipts
-- support easier returns and proof of purchase
-- participate in privacy-aware customer infrastructure
+- user accounts and authentication
+- direct retailer and biller integrations for an initial focused partner set
+- digital receipt and invoice import
+- manual receipt and invoice scanning
+- OCR extraction with user review
+- itemized purchase and payment records
+- searchable history
+- basic trends and categorization
+- basic overspend and visibility controls
+- provenance labels and verification states
+- manual entry support for non-connected providers and cash spending
 
-## 8. Privacy and Trust Strategy
+## Excluded from MVP
 
-Privacy is a core strategy, not only a compliance requirement.
+- payments executed through the app
+- broad universal retailer and biller coverage on day one
+- stored value, wallet, or custody features
+- cashback as a launch feature
+- complex loyalty mechanics
+- tokenized or speculative crypto features
 
-Granular should commit to:
+## Best Early Experience
 
-- local-first storage for detailed purchase history
-- clear data-source labels
-- user-controlled exports
-- easy deletion
-- optional cloud sync only with consent
-- no default business model based on selling personal consumer profiles
+The earliest user value should be:
 
-This position matters because users increasingly understand that purchase history is sensitive. Granular's promise is useful insight without unnecessary surveillance.
+1. connect to a focused set of retailers or billers where direct data exists
+2. import or scan what is still missing
+3. review OCR and provenance labels
+4. search and understand the full household record
+5. act on early trends and overspend signals
 
-## 9. Revenue Model
+## MVP Success Standard
 
-### Consumer Revenue
+The MVP is successful when users can trust that Granular gives them a clearer, more complete picture of household spending than a bank statement or budgeting app alone.`,
 
-Granular should use freemium pricing.
+  revenue: `# Revenue Model and Go-To-Market
 
-Free includes:
+> Launch as a software platform first, then expand monetization once trust and retention are proven
 
-- core receipt intelligence
-- itemized history
-- basic search
-- basic spending dashboard
-- manual balance mode
-- access to standard opt-in cashback offers
+## Revenue Stages
 
-Premium Individual includes:
+### Stage 1: Consumer Subscription
+
+The first revenue should come from consumer utility.
+
+Potential premium features:
 
 - overspend alerts
-- repeat-item inflation detection
-- advanced budgets
-- multi-card controls
-- deeper comparisons
-- advanced exports
-- cashback optimization alerts and missed-cashback detection
+- inflation detection
+- biller drift alerts
+- advanced reporting
+- broader history windows
+- verified export packages
+- fuller household-visibility controls
 
-Premium Household includes:
+### Stage 2: Retailer and Biller Integration Revenue
 
-- shared household views
-- household budgets
-- member support
-- shared reports and planning tools
-- household cashback summaries and savings reporting
+Potential B2B revenue streams:
 
-### Retail / B2B Revenue
+- integration fees
+- onboarding fees
+- premium digital receipt and invoice infrastructure
+- verification and proof APIs
+- support and claims workflows
 
-Retailer revenue should come from:
+### Stage 3: Infrastructure Expansion
 
-- integration setup fees
-- platform or usage fees
-- white-label digital receipt delivery
-- enterprise support
-- retailer workflow tooling
-- partner-funded cashback campaign fees and validation services
+After trust and legitimacy are proven:
 
-The business should avoid depending on personal data resale.
+- provenance infrastructure licensing
+- verification services
+- auditable permissions workflows
+- commerce and billing trust tooling
 
-## 10. Go-To-Market Strategy
+## Cashback Position
 
-### Stage 1: Consumer Wedge
+Cashback should be treated only as a later potential option.
 
-Launch a useful consumer product focused on:
+- it should not be part of the initial launch proposition
+- it should only be evaluated after development, launch, retention, and partner usefulness are proven
+- if introduced, it should remain partner-driven and clearly secondary to the product core
 
-- receipt capture
-- digital receipt import
-- itemized history
-- privacy-first onboarding
-- high-frequency household spending categories
+## Consumer Motion
 
-Core message:
+Start with users who care deeply about:
 
-**"See not just where your money went, but exactly what you bought."**
+- inflation visibility
+- overspend prevention
+- privacy
+- household payment control
+- keeping a complete record
 
-### Stage 2: Control Layer
+## Partner Motion
 
-Add budgets, alerts, comparison views, and multi-card controls. This is where Premium becomes credible.
+Start with a small number of focused direct integrations.
 
-### Stage 3: Retailer Pilot
+The partner motion should prioritize:
 
-Partner with one or two focused retailers in grocery, pharmacy, or household goods. Validate structured receipt delivery and automated basket ingestion.
+- strong data quality
+- operational clarity
+- real itemization value
+- household relevance
 
-### Stage 4: Network Expansion
+Granular should sell the practical value of direct structured data delivery, not abstract blockchain language.
 
-Expand integrations, improve item normalization, and build retailer tooling after consumer retention and paid demand are proven.
+## Strategic Revenue Logic
 
-## 11. Operating Plan
+The strongest business model is software, infrastructure, and premium utility. Granular should avoid relying on personal data resale as the center of its monetization story.`,
 
-### Early Product Priorities
+  trust: `# Trust, Blockchain, and Regulatory Position
 
-1. Receipt scan and import
-2. Itemized purchase history
-3. Search and purchase detail
-4. Spending dashboard
-5. Budgets and alerts
-6. Opt-in cashback ledger
-7. Exports
-8. Optional cards and bank connection
-9. Retailer integrations
+> Trust should sit underneath the platform, not become the consumer-facing gimmick
 
-### Early Team Needs
+## Why Blockchain Fits
 
-- product and UX
-- mobile engineering
-- OCR and receipt parsing
-- backend and integration engineering
-- privacy and security architecture
-- customer discovery and retailer partnerships
+Blockchain should be used only where it clearly improves trust, proof, and interoperability.
 
-## 12. Development Roadmap
+### Off-Chain
 
-### Phase 1: MVP
+Sensitive data should remain off-chain:
 
-- receipt upload
-- OCR review
-- item parsing
-- purchase detail page
-- searchable history
-- basic spending view
-- manual balance mode
-
-### Phase 2: Utility Expansion
-
+- receipt images
+- invoice contents
+- user identities
 - budgets
-- item and store trends
-- multi-card views
-- exports
-- improved categorization
+- analytics
+- behavioral insights
+
+### On-Chain or Anchored
+
+Verification data can be anchored selectively:
+
+- receipt hashes
+- invoice hashes
+- timestamps
+- partner attestations
+- permission and consent receipts
+- proof references
+
+This creates a verifiable trust layer without turning Granular into a crypto product.
+
+## Regulatory Position
+
+Granular should launch as a technical service provider.
+
+At launch, the company should:
+
+- ingest and normalize receipt and invoice data
+- monitor, analyze, and categorize payments and obligations
+- provide consumer visibility and purchase intelligence
+- avoid moving funds
+- avoid executing payments
+- avoid custody or stored-value features
+
+The regulatory perimeter should only be reassessed later if Granular adds payment initiation, held funds, stored value, wallet custody, or licensed financial execution.
+
+## Trust Principles
+
+- privacy-first by default
+- provenance labels on important records
+- consent and permissions that are auditable
+- verification as infrastructure rather than marketing theater
+- software and infrastructure before regulated financial expansion
+
+## Trust Outcome
+
+Granular should feel like a product that helps users understand their money without forcing them into surveillance-heavy banking, loyalty, or crypto narratives.`,
+
+  rollout: `# Architecture and Rollout Strategy
+
+> Build the core domains first, then stage expansion around proof of value and operational readiness
+
+## Technical Architecture Direction
+
+Granular should begin with a modular monolith and treat these domains as first-class:
+
+- users and auth
+- retailer and biller API connectivity
+- receipt and invoice ingestion
+- OCR and review
+- normalization
+- purchases
+- bills and obligations
+- matching and reconciliation
+- search
+- trends and categorization
 - alerts
-
-### Phase 3: Automation
-
-- optional card signals
-- receipt-to-payment matching
-- digital receipt imports
-- first retailer integrations
-- receipt-based cashback test with limited partner-funded offers
-
-### Phase 4: Network Growth
-
-- additional retailer integrations
-- normalized item database
-- household plan
-- retailer tooling
-- stronger analytics and reporting
-- mature rewards wallet with partner dashboards and fraud review tooling
-
-## 13. Competitive Strategy
-
-Granular competes by combining:
-
-1. item-level financial understanding
-2. privacy-first architecture
-3. retailer-connected digital receipt infrastructure
-
-This separates it from traditional budgeting apps, banking interfaces, loyalty programs, and document-style receipt scanners.
-
-## 14. Key Risks
-
-### Integration Risk
-
-Retailer adoption may take time.
-
-Response: start with manual receipts, digital imports, and selective high-value pilots.
-
-### Accuracy Risk
-
-Receipt parsing and matching may be imperfect early.
-
-Response: use confirmation workflows, editable records, and continuous normalization improvements.
-
-### Trust Risk
-
-Users may assume any finance app is harvesting data.
-
-Response: make the local-first model visible in onboarding, settings, and data-source explanations.
-
-### Complexity Risk
-
-Too many features could obscure the product.
-
-Response: lead with one promise: understand what you bought and where your money is going.
-
-## 15. Success Metrics
-
-### Early Metrics
-
-- first receipt completion rate
-- receipt-to-review rate
-- weekly active users
-- repeat receipt uploads
-- search usage
-- budget creation rate
-- retention after first itemized record
-
-### Monetization Metrics
-
-- alert engagement
-- premium conversion from alert previews
-- trial-to-paid conversion
-- paid retention
-- household plan interest
-
-### Retailer Metrics
-
-- integration count
-- receipt ingestion volume
-- successful delivery rate
-- match rate
-- retailer renewal interest
-
-## 16. Funding Use
-
-Initial funding should support:
-
-- mobile app development
-- receipt parsing and item normalization
-- privacy and security architecture
-- backend coordination services
-- product design and testing
-- retailer pilot integrations
-- early user acquisition
-
-## 17. Strategic Conclusion
-
-Granular addresses a meaningful gap in consumer finance and retail infrastructure. People want better spending visibility, but they are increasingly unwilling to surrender sensitive personal data to get it.
-
-Granular's opportunity is to build a trusted product that begins with item-level receipt intelligence and expands into a privacy-first digital receipt network.
-
-The long-term company should be built around a clear promise:
-
-**useful financial insight, practical control, and purchase data that remains under the user's authority.**`,
-
-  monetization: `# Granular Premium and Monetization Strategy
-
-> Working name: Receipt Accounts
-> Date: April 2026
-
-## Core Principle
-
-Premium should not mean "more charts."
-
-Premium should mean:
-
-**less overspend, earlier warnings, and better control over recurring household behavior.**
-
-That is a clearer reason to pay than generic analytics. Users are more likely to pay when the product helps them avoid a bad outcome, save money, reduce stress, or manage household spending with confidence.
-
-## Free vs Paid Thesis
-
-### Free Product
-
-The free product should prove the core product truth:
-
-- receipt capture is useful
-- digital receipt import is useful
-- itemized history is better than merchant-only transaction feeds
-- the local-first privacy promise is credible
-- users can get value without connecting a bank
-
-### Paid Product
-
-The paid product should help users act on their purchase data:
-
-- avoid overspending
-- spot rising costs earlier
-- manage spend across multiple cards
-- control repeat behavior at specific retailers
-- plan household essentials spending
-- export and report with less manual effort
-
-## Best First Paying User
-
-The strongest first paying user is:
-
-- budget-aware
-- privacy-conscious
-- shopping frequently for household essentials
-- using multiple payment methods
-- frustrated by shallow banking app views
-- interested in warnings and control, not only reports
-
-This is sharper than trying to serve "everyone with receipts."
-
-## Free Plan
-
-### Included Features
-
-- receipt scan
-- digital receipt import
-- itemized purchase history
-- searchable receipt archive
-- basic spending dashboard
-- optional manual balance mode
-- basic store and item views
-- limited export
-
-### Purpose
-
-The free plan should create the first aha moment:
-
-**"I can finally see what I actually bought."**
-
-Free should be generous enough to build trust and habit, but limited enough that users with real control needs can clearly understand why Premium exists.
-
-## Premium Individual
-
-### Premium Promise
-
-Granular Premium helps users spot overspend before it becomes a problem.
-
-### Paid Features
-
-- overspend alerts
-- repeat-item inflation detection
-- retailer drift alerts
-- advanced budgets
-- threshold warnings
-- multi-card spend alerts
-- longer comparison history
-- deeper store and item trends
-- advanced exports and reports
-- cashback optimization alerts
-- missed cashback detection
-- cashback plus budget impact reporting
-
-### Upgrade Logic
-
-Premium should unlock action and prevention. The user should feel that paid features help them avoid future waste, not simply decorate past spending.
-
-## Premium Household
-
-### Household Promise
-
-Granular Household helps families and shared homes coordinate essential spending with less confusion.
-
-### Paid Features
-
-- shared household views
-- household budgets
-- member-level spending context
-- combined grocery and essentials tracking
-- shared reports
-- extra member support
-- household planning controls
-
-### Packaging Note
-
-Household should launch only after individual retention is proven, unless early user research shows shared planning is a major conversion driver.
-
-## Retail / B2B Monetization
-
-The retailer side should be sold as:
-
-- digital receipt infrastructure
-- post-purchase customer experience
-- proof-of-purchase and returns support
-- privacy-aware receipt modernization
-- transparent retailer or brand-funded cashback campaigns
-
-It should not be sold primarily as:
-
-- hidden consumer profiling
-- broad personal-data analytics
-- market research resale
-
-### First Retailer Revenue Lines
-
-- integration setup fees
-- platform or usage fees
-- white-label digital receipt delivery
-- cashback campaign setup fees
-- claim validation and rewards processing margin
-- retailer workflow tooling
-- enterprise support
-
-## Recommended Pricing Logic
-
-Exact pricing should be tested, but the logic should be:
-
-- free creates habit and trust
-- Premium Individual saves money, time, or stress
-- Premium Household expands coordination and control
-- Cashback creates a partner-funded savings layer without requiring Premium for basic eligibility
-- B2B pricing reflects integration complexity and receipt volume
-
-The paid proposition should feel financial and practical.
-
-## Upgrade Triggers
-
-Premium prompts should appear when the user feels the problem.
-
-Best upgrade moments:
-
-- repeated overspend at one retailer
-- grocery costs trending upward
-- user regularly uses more than one card
-- user tries to create more advanced budget rules
-- user hits limited comparison history
-- user wants household planning
-- user has eligible purchases with missed cashback opportunities
-- user requests detailed export or reporting
-
-Upgrade prompts should not appear randomly. They should be tied to a clear value moment.
-
-## Metrics That Matter
-
-### Consumer Monetization Metrics
-
-- receipt-to-review rate
-- repeat itemized history usage
-- budget creation rate
-- alert engagement
-- percentage of users with alert-worthy patterns
-- conversion from alert preview prompts
-- trial-to-paid conversion
-- paid retention
-- churn reasons
-
-### Retailer Monetization Metrics
-
-- integration setup time
-- receipt ingestion volume
-- successful delivery rate
-- support burden per partner
-- retailer renewal interest
-- retailer cost savings from reduced paper receipts
-- funded cashback campaign revenue
-- confirmed claims, fraud rate, and support tickets per claim
-
-## Features That Should Not Lead Premium
-
-These may support the paid tier, but should not be the headline:
-
-- cosmetic dashboards
-- passive historical summaries
-- generic charts
-- exports alone
-- storage alone
-
-Premium should be about control, prevention, and practical household value.
-
-## Monetization Summary
-
-The strongest monetization story is:
-
-**Free shows you what you bought. Premium helps you do something about it.**
-
-Consumer revenue should come from useful control features. Retailer revenue should come from receipt infrastructure, transparent cashback campaigns, and post-purchase workflow value. The business should avoid making personal data resale the center of the model, because privacy is one of Granular's main strategic advantages.`,
-
-  cashback: `# Granular Cashback System
-
-> Working name: Receipt Accounts
-> Date: April 2026
-> Purpose: Strategy and product model for adding user cashback to Granular
-
-## 1. Executive Summary
-
-Granular can add a cashback system that rewards users for eligible purchases while strengthening the app's core promise: item-level financial clarity, privacy, and control.
-
-The cashback layer should not behave like a traditional loyalty program that collects personal behavior for hidden profiling. It should be a transparent rewards system where users opt into clear offers, understand why cashback is available, and receive value without surrendering their full purchase history to retailers or advertisers.
-
-The strongest model is:
-
-**Granular helps users understand what they bought. Cashback helps users save money when eligible purchases match clear, opt-in reward rules.**
-
-Cashback should be introduced after the receipt intelligence loop is working, because accurate itemized purchase data is the foundation for reliable rewards.
-
-## 2. Strategic Fit
-
-Granular is already designed to understand what a user bought from receipts, imports, and retailer integrations. That makes cashback a natural extension if it is handled carefully.
-
-Cashback supports the business by:
-
-- increasing user retention
-- giving users a direct financial benefit
-- creating a retailer and brand partnership channel
-- making receipt capture more habitual
-- strengthening Premium value when combined with alerts and savings insights
-- creating a privacy-respecting alternative to traditional loyalty schemes
-
-Cashback should never weaken the trust position. If users feel that cashback exists to harvest their data, it will damage the brand.
-
-## 3. Core Cashback Principle
-
-Cashback must be:
-
-- opt-in
-- clearly funded
-- transparent to the user
-- tied to explicit offers or merchant rules
-- separated from the user's full private purchase history
-- auditable through a user-visible rewards ledger
-- designed to avoid selling personal purchase profiles
-
-The user should always be able to answer:
-
-- Why did I receive this cashback?
-- Who funded it?
-- What purchase qualified?
-- When will it become payable?
-- What data was shared, if any?
-
-## 4. Recommended Cashback Model
-
-Granular should use a hybrid cashback model with three reward sources.
-
-### Retailer-Funded Cashback
-
-Retailers fund cashback on eligible purchases to encourage digital receipt adoption, repeat purchases, or specific category behavior.
-
-Examples include 2% cashback at a connected grocery retailer, GBP1 after three eligible pharmacy purchases, or 5% during a retailer's digital receipt pilot launch week.
-
-### Brand or Product-Funded Cashback
-
-Brands fund cashback on specific products or categories that can be validated through itemized receipts.
-
-Examples include GBP0.50 on a specific household item, 10% on a participating health product, or a bundle reward when two eligible products appear on the same receipt.
-
-### Granular-Funded Promotional Cashback
-
-Granular can fund limited promotional cashback during onboarding or special campaigns, such as first receipt rewards, setup completion boosts, or referral rewards after a verified receipt flow.
-
-Company-funded cashback should be used carefully because it affects margin. Partner-funded cashback should be the long-term model.
-
-## 5. User Experience
-
-The app should include a Cashback area where users can see:
-
-- available offers
-- activated offers
-- pending cashback
-- confirmed cashback
-- paid cashback
-- expired offers
-- total saved
-- rules for each offer
-
-Each offer should show the cashback amount, eligible retailer or product, dates, maximum reward, quantity limits, activation requirement, confirmation timing, payout rules, and data-sharing explanation.
-
-## 6. Receipt-Based Claim Flow
-
-The simplest early flow:
-
-1. User activates an offer.
-2. User shops normally.
-3. User scans or imports the receipt.
-4. Granular checks the receipt locally where possible.
-5. Eligible items are marked for claim.
-6. A minimal claim record is submitted for verification.
-7. Cashback moves from pending to confirmed after approval.
-
-For connected retailers, structured receipt or basket data can let Granular match offers automatically, add cashback to the user's pending balance, and confirm after return or cancellation windows pass.
-
-## 7. Cashback States
-
-Granular should use clear reward states.
-
-| State | Meaning |
+- exports
+- audit and provenance
+- consent and permissions
+- manual-input exception handling
+
+## Data Model Priorities
+
+Each important record should preserve:
+
+- purchase events
+- billing events
+- payment obligations
+- receipt and invoice artifacts
+- source provenance
+- verification state
+- partner attestations
+- consent and sharing receipts
+- ingestion path such as API, import, scan, or manual entry
+
+## Development Phasing
+
+| Phase | Focus |
 |---|---|
-| Available | User can activate or use the offer |
-| Activated | User opted into the offer |
-| Detected | Receipt appears to contain an eligible purchase |
-| Pending | Claim submitted or awaiting validation |
-| Confirmed | Reward approved and payable after any holding period |
-| Paid | Reward has been transferred or redeemed |
-| Rejected | Claim failed because it did not meet rules |
-| Expired | Offer window ended |
-| Reversed | Reward was removed after return, refund, or fraud review |
-
-These states should be visible in the user's rewards ledger.
-
-## 8. Privacy Architecture
-
-Cashback must follow Granular's local-first privacy model.
-
-Where possible, offer matching should happen on-device using merchant name, receipt date, item names, quantities, prices, and downloaded offer rules. The full receipt should not be shared by default just because an offer exists.
-
-When verification requires a backend or partner, Granular should submit the smallest claim record possible:
-
-- offer ID
-- anonymized user or wallet ID
-- retailer ID
-- transaction date
-- eligible line item identifiers
-- quantity
-- purchase amount
-- receipt proof token or cropped proof where required
-
-The claim should avoid sharing unrelated basket items. Reward claims should remain separate from the user's complete local financial record.
-
-## 9. Reward Funding And Unit Economics
-
-Cashback should be funded from retailer campaign budgets, brand campaign budgets, affiliate or referral commission, or Granular promotional budget.
-
-Granular can earn revenue through:
-
-- a percentage of funded cashback campaign spend
-- fixed campaign setup fees
-- retailer or brand platform fees
-- affiliate commission spread
-- premium uplift from users who save more money through the app
-
-Example structure:
-
-- Brand funds GBP1.00 user cashback per eligible purchase.
-- Brand pays Granular GBP1.25 per validated purchase.
-- User receives GBP1.00.
-- Granular retains GBP0.25 to cover processing, verification, and margin.
-
-## 10. Payout Options
-
-Early payouts should focus on cashback balance inside the app, gift card redemption, and Premium subscription credit.
-
-Later payouts can expand to bank transfer, card payout, digital wallet payout, or optional donation to approved social responsibility projects.
-
-Direct cash payout may require additional compliance, fraud checks, and payment infrastructure. It should be added after the claims system is reliable.
-
-## 11. Fraud And Abuse Controls
-
-Recommended controls include:
-
-- duplicate receipt detection
-- receipt image hash checks
-- merchant, date, and amount validation
-- item-level consistency checks
-- maximum claim limits
-- cooling-off period before payout
-- return and refund reversal handling
-- suspicious activity review
-- device and account risk signals
-- manual review queue for high-value claims
-
-The app should communicate delays as normal reward confirmation, not as user blame.
-
-## 12. Cashback And Premium
-
-Cashback should support Premium without making free users feel punished.
-
-Recommended approach:
-
-- Free users can access standard cashback offers.
-- Premium users may receive cashback boosts, better tracking, automated offer matching, or advanced savings reports.
-- Premium should not be required for basic cashback eligibility.
-
-Premium-friendly features include cashback optimization alerts, missed cashback detection, retailer savings comparisons, household cashback summaries, and cashback plus budget impact reporting.
-
-## 13. Cashback And Social Responsibility
-
-Granular's Social tab can include an optional reward donation flow.
-
-Users may choose to keep cashback, apply cashback as Premium credit, or donate cashback to approved social responsibility projects.
-
-Donation should be optional and transparent. Granular should not use private purchase behavior to pressure users into social giving.
-
-## 14. Rollout Plan
-
-### Phase 1: Receipt-Based Cashback Test
-
-Launch with a small number of simple offers: manual activation, receipt scan validation, pending and confirmed reward states, app-based cashback ledger, and limited payout as Premium credit or gift card.
-
-### Phase 2: Brand/Product Offers
-
-Add product-level cashback using itemized receipt matching, quantity limits, duplicate receipt protection, and partner-funded campaigns.
-
-### Phase 3: Retailer Pilot Cashback
-
-Add retailer-funded offers, automated receipt ingestion, automatic cashback detection, and return-window handling.
-
-### Phase 4: Full Rewards Wallet
-
-Expand into multiple payout options, cashback boosts, household cashback views, campaign reporting for partners, fraud review tooling, and partner dashboards.
-
-## 15. Success Metrics
-
-Key user metrics include offer activation rate, receipt capture lift, cashback claim rate, confirmed cashback per active user, repeat claim behavior, retention among cashback users, and trust feedback after claims.
-
-Key business metrics include campaign revenue, cashback-funded margin, partner renewal rate, cost per confirmed claim, fraud rate, support tickets per claim, and Premium conversion influenced by savings features.
-
-Key retailer metrics include digital receipt adoption lift, eligible transaction volume, offer redemption rate, repeat purchase behavior, campaign budget usage, and partner satisfaction.
-
-## 16. Strategic Conclusion
-
-Cashback can become a powerful layer in Granular if it is built with the same discipline as the rest of the product.
-
-The opportunity is not to copy traditional loyalty programs. The opportunity is to create a privacy-first cashback system that rewards users for eligible purchases while keeping their full financial life under their control.
-
-The right model is:
-
-- receipt intelligence first
-- transparent offer matching second
-- partner-funded cashback third
-- mature rewards wallet after trust and accuracy are proven
-
-Done well, cashback gives users a direct financial benefit, gives partners a privacy-aware campaign channel, and gives Granular a new revenue and retention engine without abandoning its core trust promise.`,
-
-  rollout: `# Granular Rollout Strategy
-
-> Working name: Receipt Accounts
-> Date: April 2026
-
-## Rollout Goal
-
-Launch Granular in a staged way that proves user value before depending on broad retailer integrations.
-
-The rollout should validate, in order:
-
-1. users care about item-level spending visibility
-2. users understand and trust the local-first privacy model
-3. users return for control, not just curiosity
-4. paid conversion comes from prevention and alerts
-5. transparent cashback increases receipt capture and retention without weakening trust
-6. retailer automation improves an already useful product
-
-## Strategic Rollout Principle
-
-Granular should not launch as a universal real-time finance platform.
-
-The first version should be a focused receipt intelligence product. It should help users understand purchases at item level, build a searchable history, and get a clearer everyday spending picture. Optional cards, bank connections, and retailer integrations should deepen the product after the core loop works.
-
-## Phase 0: Internal Prototype
-
-### Goal
-
-Prove the core product loop internally.
-
-### Scope
-
-- receipt scan or upload
-- OCR extraction
-- itemized purchase record
-- basic merchant and date capture
-- searchable history
-- simple purchase-aware spending view
-
-### Success Criteria
-
-- team can reliably create itemized purchase records
-- users can understand source labels and confidence states
-- the app can show a clear purchase detail view
-- privacy language is understandable
-
-## Phase 1: Closed Alpha
-
-### Audience
-
-- founder network
-- privacy-conscious early adopters
-- budget-aware households
-- users who already save receipts or track spending manually
-
-### Goal
-
-Validate that item-level receipt history is useful before deeper integrations exist.
-
-### Scope
-
-- manual receipt scan
-- digital receipt import
-- itemized history
-- basic spending dashboard
-- optional manual balance mode
-- export of personal records
-- no mandatory cashback, bank linking, or retailer integration dependency
-
-### Metrics
-
-- first receipt completion rate
-- repeat receipt upload rate
-- weekly active usage
-- search and review behavior
-- onboarding completion
-- qualitative trust feedback
-
-### Exit Criteria
-
-- users return after the first receipt
-- users can explain the value in their own words
-- onboarding works without bank linking
-- the product has a clear first-session aha moment
-
-## Phase 2: Control Beta
-
-### Audience
-
-- strongest alpha users
-- household shoppers
-- multi-card users
-- users managing grocery, pharmacy, and recurring essentials spend
-
-### Goal
-
-Prove the control and paid-value layer.
-
-### Scope
-
-- budgets
-- spending limits
-- overspend alerts
-- retailer drift alerts
-- repeat-item inflation detection
-- multi-card views
-- comparison by week and month
-- missed cashback detection for activated or clearly eligible offers
-
-### Metrics
-
-- budget creation rate
-- alert engagement
-- number of users with alert-worthy patterns
-- retention difference between alert users and passive users
-- premium waitlist interest
-- interest in cashback optimization and savings reporting
-- willingness-to-pay interviews
-
-### Exit Criteria
-
-- users treat Granular as a control tool, not only a receipt archive
-- alerts create clear user value
-- premium packaging can be tested against real behavior
-
-## Phase 3: Focused Retailer Pilot
-
-### Audience
-
-- one or two high-frequency retailers
-- ideal categories: grocery, pharmacy, household goods
-
-### Goal
-
-Validate automation in a narrow, useful category.
-
-### Scope
-
-- retailer API or structured receipt pilot
-- automated digital receipt delivery
-- basket ingestion
-- receipt-to-payment matching where available
-- post-purchase receipt experience
-- limited retailer-funded cashback offers attached to explicit opt-in rules
-
-### Metrics
-
-- ingestion success rate
-- match rate
-- purchase-to-app latency
-- user trust in automated records
-- reduction in manual receipt effort
-- retailer operational feedback
-- cashback activation, claim, and confirmation rates
-
-### Exit Criteria
-
-- automation increases engagement
-- retailer workflow is operationally manageable
-- the pilot produces a repeatable integration pattern
-
-## Phase 4: Premium Launch
-
-### Audience
-
-- users with repeat behavior
-- users who create budgets
-- users who trigger overspend or drift patterns
-- households with frequent essential spending
-
-### Goal
-
-Launch paid plans around proven user value.
-
-### Scope
-
-- Premium Individual
-- Premium Household
-- advanced budgets
-- prevention alerts
-- longer comparison history
-- multi-card controls
-- advanced exports and reports
-- cashback boosts, optimization alerts, and savings impact reporting
-
-### Metrics
-
-- conversion from alert previews
-- trial-to-paid conversion
-- paid retention
-- churn reasons
-- engagement lift among paid users
-
-### Exit Criteria
-
-- users pay for prevention and control
-- paid retention is stronger than free retention
-- upgrade prompts feel tied to meaningful user moments
-- cashback does not make basic rewards feel paywalled
-
-## Phase 5: Cashback Expansion
-
-### Goal
-
-Validate partner-funded cashback as a retention and revenue layer after receipt intelligence and control features are reliable.
-
-### Scope
-
-- brand and product-funded offers
-- receipt-based claim validation
-- user-visible rewards ledger
-- duplicate receipt and fraud controls
-- Premium credit or gift-card payout
-- optional donation flow through the Social tab
-
-### Metrics
-
-- offer activation rate
-- receipt capture lift from offers
-- confirmed cashback per active user
-- claim fraud and rejection rate
-- campaign revenue and partner renewal interest
-
-### Exit Criteria
-
-- cashback increases normal receipt behavior without encouraging overspending
-- users understand why rewards were paid and what data was shared
-- partner-funded campaigns show positive margin after validation costs
-
-## Phase 6: Broader Expansion
-
-### Goal
-
-Expand category coverage and retailer infrastructure after the core product loop is proven.
-
-### Scope
-
-- additional retailer pilots
-- stronger item normalization
-- improved matching
-- more automated imports
-- household workflows
-- web-based exports and reporting
-- retailer admin tooling
-
-### Metrics
-
-- automation coverage
-- category expansion retention
-- partner pipeline growth
-- support burden per integration
-- normalized item quality
-- active paid households
-- mature rewards wallet adoption
-
-## Recommended Launch Geography
-
-Start in one geography first.
-
-The best first market should have:
-
-- strong receipt behavior
-- high card usage
-- clear grocery and pharmacy spend patterns
-- a manageable compliance surface
-- a simple first currency and product narrative
-
-If testing is easiest in the UK, the first wedge should focus on grocery and pharmacy spending. Expansion should come after the product proves retention and control value.
-
-## What Not To Do Early
-
-- do not make bank linking mandatory
-- do not depend on retailer integrations for launch
-- do not sell premium as generic analytics
-- do not launch across too many categories at once
-- do not build a broad enterprise sales motion before consumer pull exists
-- do not overpromise real-time balance accuracy
-
-## Rollout Summary
-
-The correct order is:
-
-1. Receipt intelligence
-2. Searchable itemized history
-3. Budgets and alerts
-4. Premium control features
-5. Focused cashback tests
-6. Focused retailer pilots
-7. Broader infrastructure and rewards expansion
-
-This keeps Granular useful from day one while preserving the long-term path toward automated, retailer-connected purchase intelligence.`,
-
-  social: `# Granular Corporate Social Responsibility
-
-> Date: April 2026
-> Working name: Receipt Accounts
-
-## 1. Purpose
-
-Granular is being built to help people understand their financial lives with more clarity, control, and privacy. That same principle should shape how the company participates in wider social responsibility.
-
-As Granular grows, the company will dedicate a standard percentage of earnings to social responsibility projects. The model is simple: the more users Granular serves, the greater the company's earning potential becomes, and the more funding can be directed toward projects that create public benefit.
-
-Granular's social responsibility work should not be treated as a marketing add-on. It should be a visible, measurable part of the business model.
-
-The cashback system can extend this commitment by letting users optionally donate confirmed rewards to approved social responsibility projects. Donation should always be a user choice, never a prompt driven by private purchase behavior.
-
-## 2. Core Commitment
-
-Granular will reserve a standard percentage of company earnings for social responsibility initiatives.
-
-This commitment means:
-
-- social contribution increases as the company grows
-- users can see how their participation supports wider impact
-- social responsibility is connected directly to business performance
-- Granular remains accountable for where funds are directed
-- cashback donations are transparent, optional, and separated from private spending profiles
-
-The exact percentage should be approved by leadership and reviewed annually, but the principle should remain consistent: a defined share of earnings will be set aside for social good.
-
-## 3. User Growth And Social Impact
-
-Granular's impact model is tied to user participation.
-
-Every new active user helps strengthen the company by increasing adoption, improving the case for retailer partnerships, and supporting long-term revenue growth. As earnings grow from subscriptions, retailer integrations, and other approved revenue lines, the social responsibility allocation grows with it.
-
-This creates a direct relationship between product adoption and social contribution:
-
-- more users create stronger business momentum
-- stronger business momentum supports greater earnings
-- greater earnings increase the amount available for social projects
-- users can follow the projects their participation helps make possible
-
-The goal is to make growth meaningful beyond company valuation alone.
-
-## 4. Focus Areas
-
-Granular's social responsibility projects should align with the company's mission, product category, and user trust position.
-
-Priority areas may include:
-
-- financial literacy and household budgeting education
-- digital inclusion and access to practical financial tools
-- support for low-income families managing everyday spending pressure
-- community programs that reduce financial stress
-- environmental initiatives linked to reduced paper receipt usage
-- privacy education and consumer data rights awareness
-
-Granular should focus on projects where the company can explain the connection between its business and the social outcome.
-
-## 5. The Social Tab
-
-Granular will include a Social tab inside the app so users can keep up to date with the social responsibility projects the company is involved in.
-
-The Social tab should make the company's commitments visible and easy to understand. It may include:
-
-- current social responsibility projects
-- project partners and beneficiary organizations
-- amount allocated or contributed
-- project status and updates
-- impact summaries
-- upcoming initiatives
-- annual social responsibility reports
-- optional cashback donation history and project allocation summaries
-
-The Social tab should be clear, factual, and transparent. Users should be able to see what Granular is supporting, why it matters, and how the company's growth contributes to the work.
-
-## 6. Transparency And Reporting
-
-Granular should report its social responsibility activity on a regular basis.
-
-At minimum, reporting should include:
-
-- the standard earnings percentage dedicated to social responsibility
-- cashback donations directed by users, reported separately from company-funded CSR
-- total amount allocated during the reporting period
-- projects funded
-- partner organizations involved
-- progress made
-- lessons learned
-- planned next steps
-
-Where possible, updates should be shared both inside the app and in public-facing company materials.
-
-## 7. Governance
-
-Granular should manage social responsibility funds with clear internal governance.
-
-Recommended governance practices include:
-
-- annual leadership approval of the CSR percentage and project priorities
-- documented selection criteria for projects and partners
-- basic due diligence on partner organizations
-- internal tracking of commitments, payments, and outcomes
-- periodic review of whether projects still align with Granular's mission
-
-As the company grows, Granular may establish a dedicated CSR committee or advisory group to review projects and strengthen accountability.
-
-## 8. Project Selection Criteria
-
-Granular should select social responsibility projects based on clear criteria.
-
-Projects should ideally:
-
-- align with financial wellbeing, privacy, digital inclusion, or environmental responsibility
-- benefit communities or groups with practical need
-- be measurable enough to report progress
-- involve credible partners where external delivery is required
-- avoid conflicts with Granular's privacy-first trust position
-- create value beyond short-term brand visibility
-
-Granular should avoid projects that are difficult to verify, unrelated to the company's values, or likely to create the perception that user trust is being used as a promotional tool.
-
-## 9. User Trust
-
-Granular's CSR model must respect the same privacy-first principles as the product.
-
-The company should not use personal financial data or cashback eligibility to decide which users are shown social projects, targeted social messaging, or impact claims. Users may be invited to learn about projects through the Social tab, but their private spending data should not become a tool for social-impact marketing.
-
-Granular should keep the message simple:
-
-**By using Granular, users help support a company that dedicates a defined share of its earnings to social good.**
-
-## 10. Long-Term Vision
-
-Over time, Granular can become more than a personal finance and receipt-intelligence platform. It can become a company where user growth, responsible earnings, and measurable public benefit are connected by design.
-
-The long-term ambition is to build a trusted financial technology company that:
-
-- helps users understand their own money
-- reduces unnecessary paper receipt waste
-- supports practical financial wellbeing projects
-- reports social impact transparently
-- grows without abandoning user privacy
-
-Granular's social responsibility commitment should become part of the company's identity: the more the platform grows, the more it can give back.`
+| Phase 0 | Company formation, product definition, regulatory scoping, and partner-target selection |
+| Phase 1 | Prototype the receipt and invoice pipeline, retailer API architecture, and trust model |
+| Phase 2 | Run closed alpha with early direct integrations plus manual fallback flows |
+| Phase 3 | Refine categorization, alerts, household visibility, and premium value signals |
+| Phase 4 | Run focused retailer and biller pilots, including utilities or other recurring providers |
+| Phase 5 | Launch the paid product and prove retention |
+| Phase 6 | Expand partner coverage, improve reconciliation, and evaluate later optional features |
+
+## Rollout Rules
+
+- become useful before becoming broad
+- prove trust before adding adjacent finance features
+- validate direct integrations with focused pilots
+- keep manual capture strong enough to preserve household completeness
+- let optional features come only after the software core is stable
+
+## Rollout Conclusion
+
+Granular should launch as a disciplined visibility platform: connected where possible, manually complete where needed, and built to expand into trust infrastructure only after the core household record is working well.`
 };
 
 const escapeHtml = (value) =>
